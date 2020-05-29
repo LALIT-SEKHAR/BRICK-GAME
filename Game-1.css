@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: bisque;
+}
+#gamefreme{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    /* background-color: aquamarine; */
+    box-shadow: 12px 12px 10px rgb(255, 209, 158),
+                -12px -12px 10px rgb(255, 240, 224);
+    border-radius: 5px;
+    /* padding: 10px; */
+    overflow: hidden;
+}
+#opstrical{
+    position: absolute;
+    /* top: 0; */
+    /* bottom: 0; */
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgb(60, 60, 60);
+    box-shadow: inset 12px 12px 3px rgb(40, 40, 40),
+                inset -12px -12px 3px rgb(80, 80, 80);
+    animation: toptobottom 1000ms infinite linear;
+}
+#player{
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    bottom: 0px;
+    left: 100px;
+    background-color: red;
+    /* border: 2px solid rgb(255, 176, 91); */
+    border-radius: 5px;
+    box-shadow: inset 12px 12px 3px rgb(232, 0, 0),
+                inset -12px -12px 3px rgb(255, 81, 81);
+    
+}
+
+@keyframes toptobottom{
+    0%{
+        top: -50px;
+    }
+    100%{
+        top: 300px;
+    }
+}
+
+
+#movide_verson{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+}
+
+#right,#left{
+    margin: 10px;
+    margin-bottom: -35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(80, 80, 80, 0.5);
+    height: 70px;
+    width: 70px;
+    padding: 10px;
+    font-size: xx-large;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 50%;
+    box-shadow: 0px 5px 5px rgb(100, 100, 100);
+    cursor: pointer;
+}
+#right::after{
+    content: '>';
+}
+#left::after{
+    content: '<';
+}
+#left:active,#right:active{
+    box-shadow: 0px 3px 3px rgb(100, 100, 100);
+    transform: scale(0.95);
+}
+
+#Status{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: orangered;
+    font-size: large;
+    line-height: 40px;
+    margin: -80px;
+    letter-spacing: 5px;
+}
+#ScoreBord{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: orangered;
+    font-size: large;
+    line-height: 40px;
+    margin-top: -20px;
+    margin-bottom: -80px;
+}
+#restart{
+    visibility: visible;
+    height: 50px;
+    width: 100px;
+    background-color: transparent;
+    border: none;
+    border-radius: 25px;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 12px 12px 10px rgb(255, 209, 158),
+                -12px -12px 10px rgb(255, 240, 224);
+}
