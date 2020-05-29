@@ -57,6 +57,7 @@ opstrical.addEventListener(
                     '';
                     document.getElementById('restart').style.visibility = 
                     'hidden';
+                    Score = 0;
             });
         }else if (playerLeft == opstricalLeft && 
             opstricalTop<300 && opstricalTop>200) {
